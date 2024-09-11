@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: redis.study
+  profiles:
+    default: local
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:redis
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+  data:
+    redis:
+      host: localhost # default
+      port: 6379 # default
+
+# redis 추가
+logging:
+  level:
+    org.springframework.cache: trace

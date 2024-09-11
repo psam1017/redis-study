@@ -1,0 +1,13 @@
+spring:
+  config:
+    activate:
+      on-profile: product
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:redis
+    username: sa
+    password:
+  data:
+    redis:
+      host: cache-server # match the service name in compose.yml
+      port: 6379
